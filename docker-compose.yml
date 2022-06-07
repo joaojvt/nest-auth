@@ -14,17 +14,17 @@ services:
     env_file:
       - .env
 
-  # api:
-  #   build: .
-  #   volumes:
-  #     - .:/app
-  #   ports:
-  #     - 3000:3000
-  #   env_file:
-  #     - .env
-  #   command: npm run start:dev
-  #   depends_on:
-  #     - postgres
+  api:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - 3000:3000
+    env_file:
+      - .env
+    command: npm run start:dev
+    depends_on:
+      - postgres
 
 volumes:
   postgres:
